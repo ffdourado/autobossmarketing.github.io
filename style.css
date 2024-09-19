@@ -12,22 +12,22 @@ body {
     background-color: #000;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
 }
 
 .logo {
-    width: 250px;
+    width: 300px;
 }
 
 .cta-button {
     background-color: #00CC66;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 35px;
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .cta-button:hover {
@@ -37,20 +37,20 @@ body {
 /* Services Section */
 .services {
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
     background-color: #fff;
 }
 
 .service-cards {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .service {
     background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 30px;
+    border-radius: 10px;
     width: 30%;
 }
 
@@ -64,11 +64,17 @@ body {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .testimonial {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.testimonial-logo {
+    width: 100px;
+    margin-bottom: 15px;
 }
 
 /* Contact Section */
@@ -76,7 +82,12 @@ body {
     background-color: #00CC66;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
+}
+
+.contact a {
+    color: white;
+    text-decoration: underline;
 }
 
 footer {
