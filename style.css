@@ -164,3 +164,14 @@ body {
 }
 
 .cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9em;
+}
