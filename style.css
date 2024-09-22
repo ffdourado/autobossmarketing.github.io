@@ -11,7 +11,15 @@ body {
     color: white; /* Ensure text is visible */
     line-height: 1.6;
     display: block;
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Full-width container for mobile */
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 /* Hero Section */
@@ -24,6 +32,8 @@ body {
     background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
     text-align: center;
     padding: 20px;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
 }
 
 .logo {
@@ -66,6 +76,8 @@ body {
     background-color: #111;
     padding: 80px 20px;
     text-align: center;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
 }
 
 .feature-cards {
@@ -73,6 +85,7 @@ body {
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
+    margin: 0 auto; /* Center the features */
 }
 
 .feature {
@@ -81,8 +94,9 @@ body {
     border-radius: 10px;
     color: white;
     text-align: center;
-    width: 30%; /* Adjust width for 3 columns */
-    min-width: 250px; /* Responsive minimum width */
+    width: 30%; /* 3 columns */
+    min-width: 250px;
+    margin: 10px auto; /* Center the features on smaller screens */
 }
 
 .feature h3 {
@@ -104,6 +118,8 @@ body {
     background-color: #1a1a1a;
     padding: 80px 20px;
     text-align: center;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
 }
 
 .testimonial {
@@ -113,6 +129,7 @@ body {
     color: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px auto; /* Center testimonials */
 }
 
 .testimonial-logo {
@@ -129,6 +146,8 @@ body {
     text-align: center;
     color: black;
     border-radius: 15px;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
 }
 
 .cta-section h2 {
@@ -144,3 +163,42 @@ body {
 
 footer {
     background-color: #000;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;  /* Adjust font size for mobile */
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .feature-cards {
+        flex-direction: column; /* Stack features vertically on mobile */
+    }
+
+    .feature {
+        width: 100%; /* Full width for features on mobile */
+        margin-bottom: 30px;
+    }
+
+    .cta-section h2 {
+        font-size: 2em;
+    }
+
+    .cta-section p {
+        font-size: 1.1em;
+    }
+}
