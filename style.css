@@ -21,17 +21,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(135deg, #fff, #00cb43); /* White and Green gradient */
+    background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
     text-align: center;
     padding: 20px;
 }
 
 .logo {
-    width: 180px;
+    width: 200px; /* Increased logo size */
     margin-bottom: 30px;
-    border-radius: 15px; /* Rounded corners for the logo */
-    background-color: white; /* Optional: You can add a background color behind the logo */
-    padding: 10px; /* Adds some space around the logo */
+    border-radius: 15px; /* Slightly rounded corners for the logo */
 }
 
 .hero h1 {
@@ -118,7 +116,9 @@ body {
 }
 
 .testimonial-logo {
-    width: 70px; /* Smaller logos for testimonials */
+    width: 80px; /* Smaller logos */
+    height: 80px; /* Ensure the logo is a square */
+    border-radius: 50%; /* Fully rounded logos */
     margin-bottom: 20px;
 }
 
@@ -144,40 +144,3 @@ body {
 
 footer {
     background-color: #000;
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2em;  /* Adjust font size for mobile */
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-
-    .cta-button {
-        padding: 12px 30px;
-        font-size: 1em;
-    }
-
-    .feature-cards {
-        flex-direction: column; /* Stack features vertically on mobile */
-    }
-
-    .feature {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .cta-section h2 {
-        font-size: 2em;
-    }
-
-    .cta-section p {
-        font-size: 1.1em;
-    }
-}
