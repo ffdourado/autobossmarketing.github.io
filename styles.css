@@ -176,7 +176,8 @@ footer {
     text-align: center;
     padding: 30px;
 }
-/* General Animations */
+
+/* Animations */
 .in-view {
     opacity: 1;
     transform: none;
@@ -198,35 +199,4 @@ footer {
     opacity: 0;
     transform: translateX(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Features and Cards */
-.feature:hover,
-.step:hover {
-    transform: translateY(-10px) scale(1.05);
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax effect */
-}
-
-.hero h1, .hero p, .cta-button {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-/* When elements come into view */
-.hero h1.in-view, .hero p.in-view, .cta-button.in-view {
-    opacity: 1;
-    transform: none;
 }
