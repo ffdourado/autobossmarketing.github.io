@@ -17,9 +17,6 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.add('in-view');
         }
     });
-}, { threshold: 0.1 }); // 10% of the element must be visible to trigger
-
-    });
 });
 
 animatedElements.forEach(element => {
