@@ -1,0 +1,100 @@
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 203, 67, 0.7));
+    text-align: center;
+    perspective: 1000px;
+}
+
+.tilt-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.tilt-effect:hover {
+    transform: rotateY(15deg) rotateX(10deg);
+}
+
+.glow-text {
+    color: #00cb43;
+    text-shadow: 0 0 10px rgba(0, 203, 67, 0.8), 0 0 20px rgba(0, 203, 67, 0.5), 0 0 40px rgba(0, 203, 67, 0.2);
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    transform-style: preserve-3d;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.9);
+}
+
+.cta-button {
+    background-color: #00cb43;
+    color: black;
+    padding: 15px 45px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 203, 67, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.75s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.cta-button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
