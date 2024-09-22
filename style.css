@@ -1,17 +1,12 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000; /* Black background */
-    color: white; /* Ensure text is visible */
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
     line-height: 1.6;
-    display: block;
-    padding: 0 20px;
+    overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -21,67 +16,85 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
-    text-align: center;
     padding: 20px;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 203, 67, 0.7));
+    text-align: center;
 }
 
 .logo {
-    width: 180px;
-    margin-bottom: 30px;
-}
-
-.hero h1 {
-    color: white;
-    font-size: 3em; /* Larger text for hero */
+    width: 100%;
+    max-width: 150px;  /* Reduce logo size */
     margin-bottom: 20px;
 }
 
+/* Ensure text color is visible */
+.hero h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;  /* Explicit text color for visibility */
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease;
+}
+
 .hero p {
-    color: white;
-    font-size: 1.4em;
-    margin-bottom: 40px;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: white;  /* Explicit text color */
+    animation: fadeIn 2.5s ease;
 }
 
 .cta-button {
     background-color: #00cb43;
     color: black;
-    padding: 15px 40px;
+    padding: 12px 30px;
+    font-size: 1.1em;
     text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
     border-radius: 30px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 203, 67, 0.6);
 }
 
 .cta-button:hover {
     background-color: white;
     color: #00cb43;
-    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.9);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5em;
+    color: #00cb43;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
 /* Features Section */
 .features {
-    background-color: #111;
-    padding: 80px 20px;
-    text-align: center;
+    background-color: #000;
+    padding: 100px 20px;
 }
 
 .feature-cards {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: space-around;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
 .feature {
-    background-color: #222;
-    padding: 40px;
-    border-radius: 10px;
-    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
     text-align: center;
-    width: 30%; /* Adjust width for 3 columns */
-    min-width: 250px; /* Responsive minimum width */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.9);
 }
 
 .feature h3 {
@@ -89,12 +102,8 @@ body {
     margin-bottom: 20px;
 }
 
-.feature p {
-    color: #ddd;
-}
-
 .feature-icon {
-    width: 80px;
+    width: 70px;
     margin-bottom: 20px;
 }
 
@@ -106,50 +115,99 @@ body {
 }
 
 .testimonial {
-    background-color: #333;
-    padding: 40px;
-    margin-bottom: 30px;
-    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    margin-bottom: 50px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
 }
 
-.testimonial-logo {
-    width: 100px;
+/* Steps (How it Works) */
+.how-it-works {
+    background-color: #000;
+    padding: 100px 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.9);
+}
+
+.step h3 {
+    color: #00cb43;
+    margin-bottom: 20px;
+}
+
+.step-icon {
+    width: 60px;
     margin-bottom: 20px;
 }
 
 /* CTA Section */
 .cta-section {
     background-color: #00cb43;
-    padding: 60px;
-    text-align: center;
     color: black;
-    border-radius: 15px;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.7);
 }
 
 .cta-section h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.cta-section p {
-    font-size: 1.3em;
-    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 footer {
     background-color: #000;
     color: white;
-    padding: 30px;
     text-align: center;
+    padding: 30px;
+}
+
+/* Animations */
+.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2em;  /* Adjust font size for mobile */
+        font-size: 2.2em;  /* Adjust for mobile */
     }
 
     .hero p {
@@ -157,24 +215,27 @@ footer {
     }
 
     .cta-button {
-        padding: 12px 30px;
+        padding: 10px 25px;
         font-size: 1em;
     }
 
-    .feature-cards {
-        flex-direction: column; /* Stack features vertically on mobile */
+    .feature-cards,
+    .steps {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .feature {
-        width: 100%;
+    .feature,
+    .step {
+        width: 90%;
         margin-bottom: 30px;
     }
 
-    .cta-section h2 {
+    .section-title {
         font-size: 2em;
     }
 
-    .cta-section p {
-        font-size: 1.1em;
+    .cta-section h2 {
+        font-size: 2.5em;
     }
 }
