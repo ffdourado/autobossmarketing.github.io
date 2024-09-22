@@ -1,176 +1,54 @@
-
-/* Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* General Animations */
+.in-view {
+    opacity: 1;
+    transform: none;
 }
 
-body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-header {
-  background-color: #000000;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-header .logo {
-  width: 150px;
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-header nav ul li a {
-  color: #00cb43;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.cta-button {
-  background-color: #00cb43;
-  color: #000;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #fff;
-  color: #000;
+/* Features and Cards */
+.feature:hover,
+.step:hover {
+    transform: translateY(-10px) scale(1.05);
 }
 
 /* Hero Section */
-#hero {
-  height: 100vh;
-  background: url('hero-bg.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  animation: fadeIn 2s ease-in;
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
 }
 
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  animation: slideIn 1.5s ease-in;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  animation: fadeIn 2s ease-in;
-}
-
-/* Features Section */
-#features {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
-  animation: fadeInUp 2s ease-in;
-}
-
-.feature-item {
-  max-width: 300px;
-  text-align: center;
-}
-
-/* CTA Section */
-#cta {
-  text-align: center;
-  padding: 50px;
-}
-
-#cta h2 {
-  margin-bottom: 20px;
-}
-
-/* Contact Form */
-#contact {
-  background-color: #111;
-  padding: 50px;
-  color: #fff;
-}
-
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#contact-form input, #contact-form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-}
-
-#contact-form button {
-  background-color: #00cb43;
-  color: #000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-#contact-form button:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-/* Footer */
-footer {
-  background-color: #000000;
-  color: #00cb43;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
+.hero h1, .hero p, .cta-button {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
+/* When elements come into view */
+.hero h1.in-view, .hero p.in-view, .cta-button.in-view {
     opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    transform: none;
 }
