@@ -1,12 +1,17 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000; /* Black background */
+    color: white; /* Ensure text is visible */
     line-height: 1.6;
-    overflow-x: hidden;
+    display: block;
+    padding: 0 20px;
 }
 
 /* Hero Section */
@@ -16,85 +21,70 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px;
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 203, 67, 0.7));
+    background-image: linear-gradient(135deg, #fff, #00cb43); /* White and Green gradient */
     text-align: center;
+    padding: 20px;
 }
 
 .logo {
-    width: 100%;
-    max-width: 150px;  /* Reduce logo size */
-    margin-bottom: 20px;
+    width: 180px;
+    margin-bottom: 30px;
+    border-radius: 15px; /* Rounded corners for the logo */
+    background-color: white; /* Optional: You can add a background color behind the logo */
+    padding: 10px; /* Adds some space around the logo */
 }
 
-/* Ensure text color is visible */
 .hero h1 {
-    font-size: 3.5em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: white;  /* Explicit text color for visibility */
+    color: white;
+    font-size: 3em; /* Larger text for hero */
     margin-bottom: 20px;
-    animation: fadeIn 2s ease;
 }
 
 .hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: white;  /* Explicit text color */
-    animation: fadeIn 2.5s ease;
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 40px;
 }
 
 .cta-button {
     background-color: #00cb43;
     color: black;
-    padding: 12px 30px;
-    font-size: 1.1em;
+    padding: 15px 40px;
     text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
     border-radius: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 203, 67, 0.6);
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: white;
     color: #00cb43;
-    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.9);
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 2.5em;
-    color: #00cb43;
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* Features Section */
 .features {
-    background-color: #000;
-    padding: 100px 20px;
+    background-color: #111;
+    padding: 80px 20px;
+    text-align: center;
 }
 
 .feature-cards {
     display: flex;
-    justify-content: space-around;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .feature {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
+    background-color: #222;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
     text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.9);
+    width: 30%; /* Adjust width for 3 columns */
+    min-width: 250px; /* Responsive minimum width */
 }
 
 .feature h3 {
@@ -102,8 +92,12 @@ body {
     margin-bottom: 20px;
 }
 
+.feature p {
+    color: #ddd;
+}
+
 .feature-icon {
-    width: 70px;
+    width: 80px;
     margin-bottom: 20px;
 }
 
@@ -115,99 +109,50 @@ body {
 }
 
 .testimonial {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    margin-bottom: 50px;
+    background-color: #333;
+    padding: 40px;
+    margin-bottom: 30px;
+    color: white;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Steps (How it Works) */
-.how-it-works {
-    background-color: #000;
-    padding: 100px 20px;
-}
-
-.steps {
-    display: flex;
-    justify-content: space-around;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.step {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.9);
-}
-
-.step h3 {
-    color: #00cb43;
-    margin-bottom: 20px;
-}
-
-.step-icon {
-    width: 60px;
+.testimonial-logo {
+    width: 70px; /* Smaller logos for testimonials */
     margin-bottom: 20px;
 }
 
 /* CTA Section */
 .cta-section {
     background-color: #00cb43;
-    color: black;
+    padding: 60px;
     text-align: center;
-    padding: 100px 20px;
-    box-shadow: 0 10px 30px rgba(0, 203, 67, 0.7);
+    color: black;
+    border-radius: 15px;
 }
 
 .cta-section h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cta-section p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
 }
 
 footer {
     background-color: #000;
     color: white;
-    text-align: center;
     padding: 30px;
-}
-
-/* Animations */
-.in-view {
-    opacity: 1;
-    transform: none;
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.slide-in-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.slide-in-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    text-align: center;
 }
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2em;  /* Adjust for mobile */
+        font-size: 2.2em;  /* Adjust font size for mobile */
     }
 
     .hero p {
@@ -215,27 +160,24 @@ footer {
     }
 
     .cta-button {
-        padding: 10px 25px;
+        padding: 12px 30px;
         font-size: 1em;
     }
 
-    .feature-cards,
-    .steps {
-        flex-direction: column;
-        align-items: center;
+    .feature-cards {
+        flex-direction: column; /* Stack features vertically on mobile */
     }
 
-    .feature,
-    .step {
-        width: 90%;
+    .feature {
+        width: 100%;
         margin-bottom: 30px;
     }
 
-    .section-title {
+    .cta-section h2 {
         font-size: 2em;
     }
 
-    .cta-section h2 {
-        font-size: 2.5em;
+    .cta-section p {
+        font-size: 1.1em;
     }
 }
