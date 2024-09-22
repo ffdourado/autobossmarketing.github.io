@@ -236,3 +236,64 @@ footer {
         font-size: 2.5em;
     }
 }
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 203, 67, 0.7));
+    text-align: center;
+}
+
+.logo {
+    width: 100%; 
+    max-width: 150px;  /* Reduce logo size */
+    margin-bottom: 20px;
+}
+
+/* Ensure text color is visible */
+.hero h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;  /* Explicit text color for visibility */
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: white;  /* Explicit text color */
+    animation: fadeIn 2.5s ease;
+}
+
+.cta-button {
+    background-color: #00cb43;
+    color: black;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 203, 67, 0.6);
+}
+
+/* Responsive Tweaks for Mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;  /* Adjust for mobile */
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
+}
