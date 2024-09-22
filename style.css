@@ -13,7 +13,15 @@ body {
     background-color: #000;
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .logo {
@@ -48,6 +56,13 @@ body {
     box-shadow: 0 8px 20px rgba(0, 204, 102, 0.6);
 }
 
+/* Section Titles */
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 /* Features Section */
 .features {
     background-color: #fff;
@@ -55,15 +70,11 @@ body {
     text-align: center;
 }
 
-.features h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
 .feature-cards {
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .feature {
@@ -71,6 +82,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     width: 30%;
+    min-width: 250px;
     transition: transform 0.3s ease;
 }
 
@@ -97,11 +109,6 @@ body {
     padding: 80px 20px;
 }
 
-.testimonials h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
 .testimonial {
     margin-bottom: 50px;
     padding: 20px;
@@ -122,18 +129,16 @@ body {
     text-align: center;
 }
 
-.how-it-works h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
 .steps {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .step {
     width: 30%;
+    min-width: 250px;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 10px;
@@ -163,11 +168,6 @@ body {
     padding: 80px 20px;
 }
 
-.cta-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
 footer {
     background-color: #000;
     color: white;
@@ -175,3 +175,7 @@ footer {
     padding: 30px;
     font-size: 0.9em;
 }
+
+/* Animations */
+.animate {
+    opacity: 
