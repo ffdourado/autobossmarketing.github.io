@@ -10,18 +10,26 @@
 </head>
 <body>
 
-    <!-- Sticky Header -->
-    <nav class="sticky-header">
-        <img src="Logo.png" alt="Autoboss Media Marketing Logo" class="logo">
-        <a href="https://wa.me/5511918419656" class="cta-button">Entre em Contato</a>
-    </nav>
+    <!-- Header with Sticky Logo and CTA Button -->
+    <header class="main-header">
+        <div class="header-container">
+            <img src="Logo.png" alt="Autoboss Media Marketing Logo" class="logo">
+            <a href="https://wa.me/5511918419656" class="cta-button">Entre em Contato</a> <!-- WhatsApp link -->
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <section class="hero">
         <h1>Impulsione Suas Vendas com a Autoboss</h1>
         <p>Maximizando o sucesso da sua concessionária com tecnologia de ponta.</p>
         <a href="https://wa.me/5511918419656" class="cta-button">Entre em Contato</a> <!-- WhatsApp link -->
-    </header>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>Quem Somos</h2>
+        <p>Autoboss Media Marketing é uma agência especializada em marketing digital para concessionárias. Ajudamos as empresas a crescerem suas vendas através de estratégias digitais inovadoras e anúncios segmentados.</p>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
@@ -67,9 +75,23 @@
         <a href="https://wa.me/5511918419656" class="cta-button">Fale Conosco</a> <!-- WhatsApp link -->
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Autoboss Media Marketing. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // Sticky Header
+        window.onscroll = function() {
+            var header = document.querySelector('.main-header');
+            var sticky = header.offsetTop;
+            if (window.pageYOffset > sticky) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        };
+    </script>
 
 </body>
 </html>
