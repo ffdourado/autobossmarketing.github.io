@@ -23,7 +23,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #000;
+    background-color: #ffffff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -40,8 +40,8 @@ body {
 }
 
 .fixed-header .cta-button-small {
-    background-color: white;
-    color: black;
+    background-color: #00cb43;
+    color: white;
     padding: 10px 20px;
     font-size: 0.9em;
     border-radius: 30px;
