@@ -10,33 +10,42 @@ body {
     background-color: #000; /* Black background */
     color: white; /* Ensure text is visible */
     line-height: 1.6;
-    display: block;
-    padding: 0;
-    margin: 0;
 }
 
-/* Sticky Header */
-.sticky-header {
-    position: sticky;
-    top: 0;
+/* Header with Sticky Logo and CTA Button */
+.main-header {
+    position: relative;
     width: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.main-header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Darker when sticky */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0 40px;
 }
 
-.sticky-header .logo {
+.header-container .logo {
     width: 150px;
 }
 
-.sticky-header .cta-button {
+.header-container .cta-button {
     background-color: #00cb43;
-    color: black;
-    padding: 10px 20px;
+    color: white;
+    padding: 10px 30px;
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
@@ -44,10 +53,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.sticky-header .cta-button:hover {
+.header-container .cta-button:hover {
     background-color: white;
     color: #00cb43;
-    cursor: pointer;
 }
 
 /* Hero Section */
@@ -57,100 +65,4 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-}
-
-.hero h1 {
-    color: white;
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    color: white;
-    font-size: 1.4em;
-    margin-bottom: 40px;
-}
-
-.cta-button {
-    background-color: white;
-    color: black;
-    padding: 15px 40px;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #00cb43;
-    color: #00cb43;
-    cursor: pointer;
-}
-
-/* Features Section */
-.features {
-    background-color: #111;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.feature-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.feature {
-    background-color: #222;
-    padding: 40px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    width: 30%;
-    min-width: 250px;
-    margin: 10px auto;
-}
-
-.feature h3 {
-    color: #00cb43;
-    margin-bottom: 20px;
-}
-
-.feature p {
-    color: #ddd;
-}
-
-.feature-icon {
-    width: 80px;
-    margin-bottom: 20px;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2em;
-    }
-
-    .cta-button {
-        padding: 12px 30px;
-        font-size: 1em;
-    }
-
-    .feature-cards {
-        flex-direction: column;
-    }
-
-    .feature {
-        width: 100%;
-    }
-
-    .cta-section h2 {
-        font-size: 2em;
-    }
-}
+    background-image: linear-gradient(135deg, #000, #00cb43
