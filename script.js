@@ -1,24 +1,24 @@
-// Smooth Scrolling for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Select elements
+const fixedHeader = document.getElementById('fixed-header');
+const heroSection = document.querySelector('.hero');
 
-// Scroll Animations
-const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+// Function to check if the hero section is in view
+function isHeroVisible() {
+    const heroRect = heroSection.getBoundingClientRect();
+    return heroRect.bottom > 0;
+}
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-        }
-    });
-});
+// Function to toggle fixed header visibility
+function toggleFixedHeader() {
+    if (!isHeroVisible()) {
+        fixedHeader.classList.add('show');
+    } else {
+        fixedHeader.classList.remove('show');
+    }
+}
 
-animatedElements.forEach(element => {
-    observer.observe(element);
-});
+// Add scroll event listener
+window.addEventListener('scroll', toggleFixedHeader);
+
+// Run the function on page load in case user starts mid-page
+toggleFixedHeader();
