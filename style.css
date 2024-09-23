@@ -7,61 +7,12 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    color: white;
+    background-color: #000; /* Black background */
+    color: white; /* Ensure text is visible */
     line-height: 1.6;
     display: block;
     padding: 0;
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    animation: fadeInBody 1s ease-in-out;
-}
-
-/* Fixed Header */
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 100;
-}
-
-.fixed-header .logo-small {
-    width: 150px; /* Smaller logo */
-}
-
-.fixed-header .cta-button-small {
-    background-color: #00cb43;
-    color: white;
-    padding: 10px 20px;
-    font-size: 0.9em;
-    border-radius: 30px;
-    text-decoration: none;
-}
-
-.fixed-header.show {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-
-/* Body Fade In */
-@keyframes fadeInBody {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 /* Full-width container for mobile */
@@ -78,55 +29,29 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(135deg, #000, #00cb43);
+    background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
     text-align: center;
     padding: 20px;
-    width: 100%;
+    width: 100%; /* Full width on mobile */
     margin: 0 auto;
-    animation: heroSlideIn 1.5s ease-out;
-}
-
-/* Hero Slide In */
-@keyframes heroSlideIn {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .logo {
-    width: 200px;
+    width: 200px; /* Increased logo size */
     margin-bottom: 30px;
-    border-radius: 15px;
-    animation: logoBounce 2s infinite;
-}
-
-/* Logo Bounce Animation */
-@keyframes logoBounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    border-radius: 15px; /* Slightly rounded corners for the logo */
 }
 
 .hero h1 {
     color: white;
-    font-size: 3em;
+    font-size: 3em; /* Larger text for hero */
     margin-bottom: 20px;
-    animation: fadeIn 2s ease;
 }
 
 .hero p {
     color: white;
     font-size: 1.4em;
     margin-bottom: 40px;
-    animation: fadeIn 2.5s ease;
 }
 
 .cta-button {
@@ -137,15 +62,13 @@ body {
     font-size: 1.2em;
     font-weight: bold;
     border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    animation: fadeIn 3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #00cb43;
-    color: #000;
+    color: #00cb43;
     cursor: pointer;
-    transform: scale(1.1);
 }
 
 /* Features Section */
@@ -153,9 +76,8 @@ body {
     background-color: #111;
     padding: 80px 20px;
     text-align: center;
-    width: 100%;
+    width: 100%; /* Full width on mobile */
     margin: 0 auto;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .feature-cards {
@@ -163,7 +85,7 @@ body {
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the features */
 }
 
 .feature {
@@ -172,28 +94,9 @@ body {
     border-radius: 10px;
     color: white;
     text-align: center;
-    width: 30%;
+    width: 30%; /* 3 columns */
     min-width: 250px;
-    margin: 10px auto;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    animation: featureFadeIn 2s ease;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-/* Feature Fade In */
-@keyframes featureFadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    margin: 10px auto; /* Center the features on smaller screens */
 }
 
 .feature h3 {
@@ -208,7 +111,6 @@ body {
 .feature-icon {
     width: 80px;
     margin-bottom: 20px;
-    animation: pulse 1.5s infinite;
 }
 
 /* Ad Management Section */
@@ -282,42 +184,13 @@ body {
     }
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .ad-management-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .image-container, .text-container {
-        padding: 0;
-    }
-
-    .phone-ad-image {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-
-/* Pulse Effect for Icons */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
 /* Testimonials Section */
 .testimonials {
     background-color: #1a1a1a;
     padding: 80px 20px;
     text-align: center;
-    width: 100%;
+    width: 100%; /* Full width on mobile */
     margin: 0 auto;
-    animation: fadeIn 2s ease;
 }
 
 .testimonial {
@@ -327,18 +200,13 @@ body {
     color: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    margin: 10px auto;
-    transition: transform 0.3s ease;
-}
-
-.testimonial:hover {
-    transform: scale(1.05);
+    margin: 10px auto; /* Center testimonials */
 }
 
 .testimonial-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 80px; /* Smaller logos */
+    height: 80px; /* Ensure the logo is a square */
+    border-radius: 50%; /* Fully rounded logos */
     margin-bottom: 20px;
 }
 
@@ -349,9 +217,8 @@ body {
     text-align: center;
     color: black;
     border-radius: 15px;
-    width: 100%;
+    width: 100%; /* Full width on mobile */
     margin: 0 auto;
-    animation: fadeInUp 1.5s ease-out;
 }
 
 .cta-section h2 {
@@ -370,37 +237,14 @@ footer {
     color: white;
     padding: 30px;
     text-align: center;
-    width: 100%;
+    width: 100%; /* Full width on mobile */
     margin: 0 auto;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* General Fade In */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Fade In Up Animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2em;
+        font-size: 2.2em;  /* Adjust font size for mobile */
     }
 
     .hero p {
@@ -413,11 +257,11 @@ footer {
     }
 
     .feature-cards {
-        flex-direction: column;
+        flex-direction: column; /* Stack features vertically on mobile */
     }
 
     .feature {
-        width: 100%;
+        width: 100%; /* Full width for features on mobile */
         margin-bottom: 30px;
     }
 
@@ -427,5 +271,19 @@ footer {
 
     .cta-section p {
         font-size: 1.1em;
+    }
+
+    .ad-management-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .text-container {
+        padding: 0;
+    }
+
+    .phone-ad-image {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
