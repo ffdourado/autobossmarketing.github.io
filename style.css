@@ -211,6 +211,95 @@ body {
     animation: pulse 1.5s infinite;
 }
 
+/* Ad Management Section */
+.ad-management {
+    background-color: #111; /* Dark background */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+}
+
+.ad-management-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.phone-ad-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.phone-ad-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.text-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00cb43;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Boost Arrow Animation */
+.boost-arrow {
+    width: 50px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .ad-management-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .text-container {
+        padding: 0;
+    }
+
+    .phone-ad-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
 /* Pulse Effect for Icons */
 @keyframes pulse {
     0%, 100% {
