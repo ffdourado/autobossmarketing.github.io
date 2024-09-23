@@ -10,52 +10,16 @@ body {
     background-color: #000; /* Black background */
     color: white; /* Ensure text is visible */
     line-height: 1.6;
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
-/* Header with Sticky Logo and CTA Button */
-.main-header {
-    position: relative;
+/* Full-width container for mobile */
+.container {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    padding: 20px 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.main-header.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.95); /* Darker when sticky */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-}
-
-.header-container .logo {
-    width: 150px;
-}
-
-.header-container .cta-button {
-    background-color: #00cb43;
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-}
-
-.header-container .cta-button:hover {
-    background-color: white;
-    color: #00cb43;
+    padding: 0;
+    margin: 0;
 }
 
 /* Hero Section */
@@ -65,4 +29,176 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(135deg, #000, #00cb43
+    background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
+}
+
+.logo {
+    width: 200px; /* Increased logo size */
+    margin-bottom: 30px;
+    border-radius: 15px; /* Slightly rounded corners for the logo */
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3em; /* Larger text for hero */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: white;
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00cb43;
+    color: #00cb43;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features {
+    background-color: #111;
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Center the features */
+}
+
+.feature {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 30%; /* 3 columns */
+    min-width: 250px;
+    margin: 10px auto; /* Center the features on smaller screens */
+}
+
+.feature h3 {
+    color: #00cb43;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    color: #ddd;
+}
+
+.feature-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: #333;
+    padding: 40px;
+    margin-bottom: 30px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px auto; /* Center testimonials */
+}
+
+.testimonial-logo {
+    width: 80px; /* Smaller logos */
+    height: 80px; /* Ensure the logo is a square */
+    border-radius: 50%; /* Fully rounded logos */
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #00cb43;
+    padding: 60px;
+    text-align: center;
+    color: black;
+    border-radius: 15px;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cta-section p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;  /* Adjust font size for mobile */
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .feature-cards {
+        flex-direction: column; /* Stack features vertically on mobile */
+    }
+
+    .feature {
+        width: 100%; /* Full width for features on mobile */
+        margin-bottom: 30px;
+    }
+
+    .cta-section h2 {
+        font-size: 2em;
+    }
+
+    .cta-section p {
+        font-size: 1.1em;
+    }
+}
