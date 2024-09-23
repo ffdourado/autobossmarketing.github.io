@@ -10,7 +10,6 @@ body {
     background-color: #000; /* Black background */
     color: white; /* Ensure text is visible */
     line-height: 1.6;
-    display: block;
     padding: 0;
     margin: 0;
 }
@@ -37,14 +36,14 @@ body {
 }
 
 .logo {
-    width: 200px; /* Increased logo size */
+    width: 150px; 
     margin-bottom: 30px;
-    border-radius: 15px; /* Slightly rounded corners for the logo */
+    border-radius: 15px; 
 }
 
 .hero h1 {
     color: white;
-    font-size: 3em; /* Larger text for hero */
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
@@ -67,50 +66,77 @@ body {
 
 .cta-button:hover {
     background-color: #00cb43;
-    color: #00cb43;
+    color: white;
     cursor: pointer;
 }
 
-/* Features Section */
-.features {
+/* Services Section */
+.services {
     background-color: #111;
     padding: 80px 20px;
     text-align: center;
-    width: 100%; /* Full width on mobile */
-    margin: 0 auto;
 }
 
-.feature-cards {
+.service-cards {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 0 auto; /* Center the features */
 }
 
-.feature {
+.service {
     background-color: #222;
     padding: 40px;
     border-radius: 10px;
-    color: white;
     text-align: center;
-    width: 30%; /* 3 columns */
+    width: 30%;
     min-width: 250px;
-    margin: 10px auto; /* Center the features on smaller screens */
+    transition: transform 0.3s ease;
 }
 
-.feature h3 {
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
     color: #00cb43;
     margin-bottom: 20px;
 }
 
-.feature p {
+.service p {
     color: #ddd;
 }
 
-.feature-icon {
-    width: 80px;
-    margin-bottom: 20px;
+/* Team Section */
+.team {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
 }
 
 /* Testimonials Section */
@@ -118,24 +144,20 @@ body {
     background-color: #1a1a1a;
     padding: 80px 20px;
     text-align: center;
-    width: 100%; /* Full width on mobile */
-    margin: 0 auto;
 }
 
 .testimonial {
     background-color: #333;
     padding: 40px;
     margin-bottom: 30px;
-    color: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    margin: 10px auto; /* Center testimonials */
 }
 
 .testimonial-logo {
-    width: 80px; /* Smaller logos */
-    height: 80px; /* Ensure the logo is a square */
-    border-radius: 50%; /* Fully rounded logos */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
@@ -146,14 +168,11 @@ body {
     text-align: center;
     color: black;
     border-radius: 15px;
-    width: 100%; /* Full width on mobile */
-    margin: 0 auto;
 }
 
 .cta-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-weight: bold;
 }
 
 .cta-section p {
@@ -161,19 +180,50 @@ body {
     margin-bottom: 40px;
 }
 
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.contact button {
+    padding: 15px 40px;
+    background-color: #00cb43;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 footer {
     background-color: #000;
     color: white;
     padding: 30px;
     text-align: center;
-    width: 100%; /* Full width on mobile */
-    margin: 0 auto;
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2em;  /* Adjust font size for mobile */
+        font-size: 2.2em;
     }
 
     .hero p {
@@ -185,20 +235,11 @@ footer {
         font-size: 1em;
     }
 
-    .feature-cards {
-        flex-direction: column; /* Stack features vertically on mobile */
-    }
-
-    .feature {
-        width: 100%; /* Full width for features on mobile */
-        margin-bottom: 30px;
+    .service-cards, .team-members {
+        flex-direction: column;
     }
 
     .cta-section h2 {
         font-size: 2em;
-    }
-
-    .cta-section p {
-        font-size: 1.1em;
     }
 }
