@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
- <link rel="icon" type="image/png" href="/favicon.ico.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autoboss Media Marketing</title>
+    <link rel="icon" type="image/png" href="/favicon.ico.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,8 +15,30 @@
         <img src="Logo.png" alt="Autoboss Media Marketing Logo" class="logo">
         <h1>Impulsione Suas Vendas com a Autoboss</h1>
         <p>Maximizando o sucesso da sua concessionária com tecnologia de ponta.</p>
-        <a href="https://wa.me/5511918419656" class="cta-button">Entre em Contato</a> <!-- WhatsApp link -->
+        <a href="https://wa.me/5511918419656" class="cta-button">Entre em Contato</a>
     </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="service-cards">
+            <div class="service">
+                <img src="icon-marketing.png" alt="Ícone de Marketing" class="service-icon">
+                <h3>Marketing Digital</h3>
+                <p>Estratégias de marketing focadas em aumentar suas vendas através de mídias digitais.</p>
+            </div>
+            <div class="service">
+                <img src="icon-webdesign.png" alt="Ícone de Web Design" class="service-icon">
+                <h3>Web Design</h3>
+                <p>Sites personalizados que capturam leads e convertem visitantes em clientes.</p>
+            </div>
+            <div class="service">
+                <img src="icon-consulting.png" alt="Ícone de Consultoria" class="service-icon">
+                <h3>Consultoria de Negócios</h3>
+                <p>Consultoria especializada para aumentar a performance da sua concessionária.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
@@ -40,18 +62,40 @@
         </div>
     </section>
 
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2 class="section-title">Conheça Nosso Time</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="team-member1.jpg" alt="João Silva" class="team-photo">
+                <h3>João Silva</h3>
+                <p>Especialista em Marketing Digital</p>
+            </div>
+            <div class="team-member">
+                <img src="team-member2.jpg" alt="Maria Costa" class="team-photo">
+                <h3>Maria Costa</h3>
+                <p>Consultora de Negócios</p>
+            </div>
+            <div class="team-member">
+                <img src="team-member3.jpg" alt="Carlos Souza" class="team-photo">
+                <h3>Carlos Souza</h3>
+                <p>Desenvolvedor Web</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials">
         <h2 class="section-title">Histórias de Sucesso</h2>
         <div class="testimonial">
             <img src="logo_dealership1.png" alt="Logo da Concessionária 1" class="testimonial-logo">
             <p>"O time da Autoboss impulsionou nossas vendas em 30 dias utilizando Facebook ADS. Chegamos a receber 200 chats de whatsapp em um dia."</p>
-            <p>- João Silva, Hanover Motors</p>
+            <p><strong>- João Silva, Hanover Motors</strong></p>
         </div>
         <div class="testimonial">
             <img src="logo_dealership2.png" alt="Logo da Concessionária 2" class="testimonial-logo">
             <p>"Resultados incríveis com leads extremamente qualificados. Volume de Leads extremamente alto. Chegamos a vender até Amarok 2.0 com 300 mil km."</p>
-            <p>- Maria Costa, Costa Veículos</p>
+            <p><strong>- Maria Costa, Costa Veículos</strong></p>
         </div>
     </section>
 
@@ -59,7 +103,18 @@
     <section class="cta-section">
         <h2>Quer Crescer Suas Vendas?</h2>
         <p>Entre em contato para saber como podemos ajudar a impulsionar seus negócios.</p>
-        <a href="https://wa.me/5511918419656" class="cta-button">Fale Conosco</a> <!-- WhatsApp link -->
+        <a href="https://wa.me/5511918419656" class="cta-button">Fale Conosco</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Fale Conosco</h2>
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua Mensagem" rows="4" required></textarea>
+            <button type="submit" class="cta-button">Enviar Mensagem</button>
+        </form>
     </section>
 
     <footer>
