@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000; /* Black background */
-    color: white; /* Ensure text is visible */
+    background-color: #000;
+    color: white;
     line-height: 1.6;
     padding: 0;
     margin: 0;
 }
 
-/* Full-width container for mobile */
+/* Full-width container */
 .container {
     width: 100%;
     padding: 0;
@@ -28,28 +28,27 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
+    background-image: linear-gradient(135deg, #000, #00cb43);
     text-align: center;
     padding: 20px;
-    width: 100%; /* Full width on mobile */
-    margin: 0 auto;
+    width: 100%;
 }
 
 .logo {
-    width: 150px; 
+    width: 150px;
     margin-bottom: 30px;
-    border-radius: 15px; 
+    border-radius: 15px;
 }
 
 .hero h1 {
     color: white;
-    font-size: 3em;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
 .hero p {
     color: white;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     margin-bottom: 40px;
 }
 
@@ -58,7 +57,7 @@ body {
     color: black;
     padding: 15px 40px;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 30px;
     transition: background-color 0.3s ease;
@@ -112,16 +111,58 @@ body {
     color: #ddd;
 }
 
+/* Features Section */
+.features {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    color: #00cb43;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    color: #ddd;
+}
+
 /* Team Section */
 .team {
-    background-color: #1a1a1a;
+    background-color: #111;
     padding: 80px 20px;
     text-align: center;
 }
 
 .team-members {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -152,6 +193,8 @@ body {
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .testimonial-logo {
@@ -171,12 +214,12 @@ body {
 }
 
 .cta-section h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .cta-section p {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     margin-bottom: 40px;
 }
 
@@ -209,10 +252,11 @@ body {
     color: black;
     border: none;
     border-radius: 30px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
+/* Footer */
 footer {
     background-color: #000;
     color: white;
@@ -223,23 +267,27 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2em;
+        font-size: 2.2rem;
     }
 
     .hero p {
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
 
     .cta-button {
         padding: 12px 30px;
-        font-size: 1em;
+        font-size: 1rem;
     }
 
-    .service-cards, .team-members {
+    .service-cards, .feature-cards, .team-members {
         flex-direction: column;
     }
 
+    .service, .feature, .team-member {
+        width: 100%;
+    }
+
     .cta-section h2 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 }
