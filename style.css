@@ -6,219 +6,326 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000; /* Black background */
+    color: white; /* Ensure text is visible */
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
-/* Navbar */
-.navbar {
+/* Full-width container for mobile */
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Fixed Header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 100;
 }
 
-.navbar .logo {
-    max-width: 150px;
+.fixed-header.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
-.navbar nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+.fixed-header .logo-small {
+    width: 100px; /* Smaller logo */
 }
 
-.cta-button {
+.fixed-header .cta-button-small {
     background-color: #00cb43;
-    color: #fff;
+    color: white;
     padding: 10px 20px;
-    border-radius: 20px;
+    font-size: 0.9em;
+    border-radius: 30px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #008f30;
 }
 
 /* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 90vh;
-    background-color: #000;
-    color: #fff;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #000, #00cb43); /* Gradient background */
     text-align: center;
     padding: 20px;
+    width: 100%; /* Full width on mobile */
+    margin: 0 auto;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 30px;
+    border-radius: 15px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    color: white;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 40px;
 }
 
-/* Section Title */
-.section-title {
-    font-size: 2rem;
-    color: #333;
-    margin: 40px 0 20px;
+.cta-button {
+    background-color: white;
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00cb43;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features {
+    background-color: #111;
+    padding: 80px 20px;
     text-align: center;
 }
 
-/* Benefits Section */
-.benefits {
+.feature-cards {
     display: flex;
+    justify-content: space-between;
+    gap: 30px;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    margin: 0 auto; /* Center the features */
 }
 
-.benefit-card {
-    background-color: #fff;
-    padding: 30px;
+.feature {
+    background-color: #222;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
     text-align: center;
-    flex: 1 1 250px;
-    max-width: 300px;
+    width: 30%;
+    min-width: 250px;
+    margin: 10px auto; /* Center the features on smaller screens */
 }
 
-.benefit-card h3 {
+.feature h3 {
     color: #00cb43;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Services Section */
-.services {
+.feature p {
+    color: #ddd;
+}
+
+.feature-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* New Ad Management Section */
+.ad-management {
+    background-color: #111; /* Dark background */
+    padding: 80px 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+    align-items: center;
+    text-align: left;
 }
 
-.service-card {
-    background-color: #fff;
-    padding: 30px;
+.ad-management-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.phone-ad-image {
+    width: 100%;
+    max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    flex: 1 1 250px;
-    max-width: 300px;
+    transition: transform 0.5s ease-in-out;
 }
 
-.service-card h3 {
+.phone-ad-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.text-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
     color: #00cb43;
-    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Boost Arrow Animation */
+.boost-arrow {
+    width: 50px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Testimonials Section */
 .testimonials {
-    padding: 50px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #1a1a1a;
+    padding: 80px 20px;
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .testimonial {
-    background-color: #444;
-    padding: 20px;
-    margin: 15px;
+    background-color: #333;
+    padding: 40px;
+    margin-bottom: 30px;
+    color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+
+.testimonial-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative; /* To allow the pseudo-element to be positioned relative to this element */
+}
+
+.testimonial-logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130px; /* Size of the float background */
+    height: 130px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Make sure the background is behind the logo */
+}
+
 
 /* CTA Section */
 .cta-section {
     background-color: #00cb43;
-    color: #fff;
-    padding: 40px 20px;
+    padding: 60px;
     text-align: center;
+    color: black;
+    border-radius: 15px;
 }
 
 .cta-section h2 {
-    font-size: 2rem;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .cta-section p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.3em;
+    margin-bottom: 40px;
 }
 
-/* Footer */
-.footer {
+footer {
     background-color: #000;
-    color: #fff;
-    padding: 30px 20px;
+    color: white;
+    padding: 30px;
     text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 20px;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.footer-contact p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.footer-bottom {
-    font-size: 0.8rem;
-    color: #aaa;
-    margin-top: 10px;
-}
-
-/* Responsive Styles */
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
+    .hero h1 {
+        font-size: 2.2em;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .hero p {
+        font-size: 1.2em;
     }
 
     .cta-button {
+        padding: 12px 30px;
         font-size: 1em;
     }
 
-    .footer-content {
+    .feature-cards {
         flex-direction: column;
     }
 
-    .benefit-card, .service-card {
-        max-width: 90%;
+    .feature {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .cta-section h2 {
+        font-size: 2em;
+    }
+
+    .cta-section p {
+        font-size: 1.1em;
+    }
+
+    .ad-management-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .text-container {
+        padding: 0;
+    }
+
+    .phone-ad-image {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
