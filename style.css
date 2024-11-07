@@ -60,7 +60,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('Background.png') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 233, 77, 0.4), rgba(0, 233, 77, 0.4)), url('Background.png') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ body {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
     padding: 2rem;
     color: #fff;
     width: 100%;
