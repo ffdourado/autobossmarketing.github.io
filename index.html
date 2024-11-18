@@ -1,176 +1,106 @@
-/* Reset Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoboss Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Horizon&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: black;
-    color: white;
-}
+  <!-- Section 1: Introduction -->
+  <section id="introduction" style="background-image: url('First section background.png');">
+    <div class="container">
+      <h1 style="font-family: 'Poppins', sans-serif;">We Elevate Your Automotive Business.</h1>
+      <p style="font-family: 'Poppins', sans-serif;">
+        Meet the best all-in-one marketing solution for your business in the automotive niche. <br>
+        Our Business is Growing Yours.
+      </p>
+      <img src="Autoboss-logo.png" alt="Autoboss Logo" class="logo">
+      <button class="cta-btn">Get Started</button>
+    </div>
+  </section>
 
-/* Header */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 15px 20px;
-    z-index: 10;
-}
+  <!-- Section 2: The AB Method -->
+  <section id="ab-method" style="background-image: url('the ab method section\'s background.png');">
+    <div class="container">
+      <h1 style="font-family: 'Horizon', sans-serif;">The AB Method</h1>
+      <img src="Gradient Raceflag svg.svg" alt="Racing Flag" class="racing-flag">
+      <p style="font-family: 'Poppins', sans-serif;">
+        Meet our tailored method. Businesses with a well-defined sales process sell 28% more than those operating without a structured approach.<br>
+        <em>Source: Harvard Business Review</em>
+      </p>
+      <button class="cta-btn">Get Started</button>
+      <div class="icons-section">
+        <div class="icon">
+          <img src="Attract Icon SVG.svg" alt="Attract">
+          <h3>Attract</h3>
+          <p>Target local buyers with precise ads on Google, Facebook, and Instagram.</p>
+        </div>
+        <div class="icon">
+          <img src="Engage Icon SVG.svg" alt="Engage">
+          <h3>Engage</h3>
+          <p>Build trust with compelling landing pages, videos, and lead magnets.</p>
+        </div>
+        <div class="icon">
+          <img src="Convert Icon SVG.svg" alt="Convert">
+          <h3>Convert</h3>
+          <p>Deliver pre-qualified leads to your CRM or WhatsApp for quick sales.</p>
+        </div>
+        <div class="icon">
+          <img src="Retain Icon SVG.svg" alt="Retain">
+          <h3>Retain</h3>
+          <p>Keep customers recurrent with ads retargeting, and email campaigns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+  <!-- Section 3: Our Services -->
+  <section id="services" style="background-image: url('our services section background.png');">
+    <div class="container">
+      <h1 style="font-family: 'Horizon', sans-serif;">Our Services</h1>
+      <p style="font-family: 'Poppins', sans-serif;">
+        Meet Our 3 Branches of Solutions. We Tailor them to Fit Your Exact Needs.
+      </p>
+      <div class="carousel">
+        <!-- Carousel will be added with JavaScript -->
+      </div>
+      <button class="cta-btn">Get Started</button>
+    </div>
+  </section>
 
-header nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
+  <!-- Section 4: Lead Form -->
+  <section id="lead-form" style="background-image: url('leadform page background.png');">
+    <div class="container">
+      <div class="text-section">
+        <h1 style="font-family: 'Horizon', sans-serif; color: white;">Be Ahead</h1>
+        <h2 style="font-family: 'Horizon', sans-serif; color: #00cb43;">of the Competition</h2>
+        <p style="font-family: 'Poppins', sans-serif;">
+          Let’s get your business a professional marketing care.<br><br>
+          Schedule a complete, in-depth analysis of your operation + a free consultation from professionals.<br>
+          We will teach you the secrets of converting leads into clients - how to drive pre-approved finance visits and more.
+        </p>
+      </div>
+      <div class="form-section">
+        <!-- Placeholder form -->
+        <form>
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Corporate Email">
+          <input type="text" placeholder="Company Name">
+          <input type="text" placeholder="Phone Number">
+          <select>
+            <option>Monthly Revenue</option>
+            <option>Less than $10,000</option>
+            <option>$10,000 - $50,000</option>
+            <option>More than $50,000</option>
+          </select>
+          <button type="submit">Receive More Information</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: url('Home page background.png') no-repeat center center/cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 600px;
-    text-align: left;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-
-.logo {
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #00cb43;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #008f2e;
-}
-
-.hero-man {
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    width: 400px;
-}
-
-/* Form Section */
-.form-page {
-    background: url('Form page background.png') no-repeat center center/cover;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.form-page h1 {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.form-page span {
-    color: #00cb43;
-}
-
-.form-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.form-text {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px 30px;
-    border: 2px solid #00cb43;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-.form-image {
-    margin: 20px auto;
-    width: 350px;
-}
-
-.lead-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.lead-form input,
-.lead-form select,
-.lead-form button {
-    width: 90%;
-    max-width: 400px;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 1rem;
-    border: 1px solid white;
-    border-radius: 5px;
-    background: none;
-    color: white;
-}
-
-.lead-form button {
-    background-color: #00cb43;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.lead-form button:hover {
-    background-color: #008f2e;
-}
-
-.form-steps {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background: white;
-    width: 50%;
-    margin: 10px auto;
-}
+</body>
+</html>
