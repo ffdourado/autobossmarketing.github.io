@@ -1,157 +1,164 @@
 /* General Styles */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000;
+    background-color: black;
     color: white;
 }
 
+/* Header */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 15px 20px;
-    z-index: 100;
+    z-index: 10;
 }
 
 header nav ul {
+    list-style: none;
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav li {
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
+    align-items: center;
 }
 
 header nav a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    position: relative;
-    background: url('hero-bg.png') no-repeat center center/cover;
+    background: url('Home page background.png') no-repeat center center/cover;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-.hero .content {
+    padding: 0 10%;
     position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
     z-index: 2;
-    color: white;
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin: 10px 0;
     font-weight: bold;
 }
 
 .hero p {
     margin: 20px 0;
     font-size: 1.2rem;
+    line-height: 1.5;
 }
 
-.hero .logo img {
+.logo {
     width: 150px;
     margin: 20px 0;
 }
 
-.hero button {
+.cta-button {
     background-color: #00cb43;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.hero button:hover {
+.cta-button:hover {
     background-color: #008f2e;
 }
 
-.hero .man-laptop {
+.hero-man {
+    width: 400px;
     position: absolute;
     bottom: 10%;
     right: 10%;
-    width: 300px;
 }
 
 /* Form Section */
 .form-page {
     padding: 60px 20px;
-    background: url('form-bg.png') no-repeat center center/cover;
+    background: url('Form page background.png') no-repeat center center/cover;
     text-align: center;
 }
 
 .form-page h1 {
     font-size: 2.5rem;
-    color: #00cb43;
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.form-page .text-box {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 1px solid #00cb43;
-    border-radius: 8px;
+.form-page span {
+    color: #00cb43;
+}
+
+.form-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-text {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00cb43;
     padding: 20px;
-    max-width: 600px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.form-image {
+    width: 300px;
     margin: 20px auto;
 }
 
-.form-page img.porsche {
-    margin: 30px 0;
-    width: 300px;
+.lead-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
 }
 
-.lead-form input, .lead-form select, .lead-form button {
-    display: block;
+.lead-form input, .lead-form select, .form-submit {
     width: 90%;
     max-width: 400px;
-    margin: 10px auto;
     padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid white;
     background: none;
     color: white;
-    font-size: 1rem;
+    border-radius: 5px;
 }
 
-.lead-form button {
+.form-submit {
     background-color: #00cb43;
     font-weight: bold;
-    border: none;
+    cursor: pointer;
 }
 
-.lead-form button:hover {
+.form-submit:hover {
     background-color: #008f2e;
 }
 
-.cta p {
-    margin: 5px 0;
-    font-size: 1.1rem;
+.form-steps {
+    font-size: 1.2rem;
+    margin-top: 20px;
     font-weight: bold;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: white;
+    margin: 10px 0;
 }
