@@ -1,0 +1,218 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: black; /* Ensures any gaps are dark */
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* CTA Button */
+.cta-btn {
+  background-color: #00cb43;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #009b35;
+  box-shadow: 0px 4px 10px rgba(0, 203, 67, 0.5);
+}
+
+/* Section: Introduction */
+#introduction {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#introduction h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#introduction p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 20px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#introduction .logo {
+  margin-top: 20px;
+  max-width: 200px;
+}
+
+/* Section: The AB Method */
+#ab-method {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+#ab-method h1 {
+  font-family: 'Horizon', sans-serif;
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.racing-flag {
+  margin: 20px auto;
+  max-width: 200px;
+}
+
+#ab-method p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.icons-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.icons-section .icon {
+  text-align: center;
+  max-width: 250px;
+}
+
+.icons-section .icon img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.icons-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.icons-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Section: Our Services */
+#services {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+#services h1 {
+  font-family: 'Horizon', sans-serif;
+  font-size: 3.5rem;
+}
+
+#services p {
+  font-size: 1.5rem;
+  margin: 20px 0 40px;
+}
+
+.carousel {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Section: Lead Form */
+#lead-form {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lead-form .text-section {
+  width: 50%;
+  padding: 20px;
+}
+
+#lead-form .text-section h1 {
+  font-family: 'Horizon', sans-serif;
+  font-size: 3rem;
+}
+
+#lead-form .text-section h2 {
+  font-family: 'Horizon', sans-serif;
+  font-size: 2.5rem;
+  color: #00cb43;
+  margin-bottom: 20px;
+}
+
+#lead-form .text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+#lead-form .form-section {
+  width: 40%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#lead-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#lead-form form input,
+#lead-form form select {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#lead-form form button {
+  background-color: #00cb43;
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#lead-form form button:hover {
+  background-color: #009b35;
+  box-shadow: 0px 4px 10px rgba(0, 203, 67, 0.5);
+}
